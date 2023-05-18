@@ -1,0 +1,114 @@
+@font-face {
+    font-family: 'Avenir LT Std';
+    src: url('../../fonts/AvenirLTStd-Roman.woff2') format('woff2'),
+        url('../../fonts/AvenirLTStd-Roman.woff') format('woff'),
+        url('../../fonts/AvenirLTStd-Roman.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Avenir LT Std';
+    src: url('../../fonts/AvenirLTStd-Book.woff2') format('woff2'),
+        url('../../fonts/AvenirLTStd-Book.woff') format('woff'),
+        url('../../fonts/AvenirLTStd-Book.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Avenir LT Std';
+    src: url('../../fonts/AvenirLTStd-Black.woff2') format('woff2'),
+        url('../../fonts/AvenirLTStd-Black.woff') format('woff'),
+        url('../../fonts/AvenirLTStd-Black.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+*, ::before, ::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+} 
+
+:root{
+    --very-dark-cyan: #040814;
+    --purple:#6421ff;
+    --blue: #0063e5;
+    --light-blue: #016cf9;
+    --white: #f9f9f9;
+    --gray: #a8a8aa;
+    --very-dark-gray: #13151d;
+    --container-padding: 8em 0px 5em;
+}
+ 
+img{
+    display: block;
+    height: auto;
+    width: 100%;;
+}
+ 
+a{
+    text-decoration: none;
+}
+
+li{
+    list-style: none;
+}
+
+body{
+    font-family: 'Avenir LT Std', sans-serif;
+}
+
+html{
+    background-color: #040714;
+}
+
+.container{
+    width: 90%;
+    overflow: hidden;
+    margin: 0 auto; 
+}
+
+.title{
+    font-size: 1.4rem;
+    color: var(--white);
+    text-align: center;
+}
+
+.paragraph{
+    font-size: 1em;
+    line-height: 1.5em;
+    color: var(--gray);
+}
+
+@media (768px < width) {
+
+    .title{
+        font-size: 1.8rem;
+        /* line-height: 4.5rem; */
+    }
+
+    .paragraph, .dropdown__title{
+        font-size: 1.2em;
+    }
+
+}
+
+@media (1024px < width) {
+
+    .title{
+        font-size: 2.5rem;
+        line-height: 3.5rem;
+        /* background-color: #6421ff; */
+    }
+
+    .paragraph{
+        font-size: 1.4em;
+        line-height: 2rem;
+        /* background-color: #0063e5; */
+    }
+}

@@ -1,0 +1,151 @@
+/* section */
+
+.section{
+    background-color: var(--very-dark-cyan);
+}
+
+/* section__details */
+
+.section__details{
+    padding: var(--container-padding);
+    --container-padding: 4em 0px 5em;
+    display: grid;
+    gap: 3em;
+    align-items: center;
+}
+
+/* galery */
+
+.galery{
+    padding: var(--container-padding);
+}
+
+.galery .texts{
+    padding-bottom: 1em;
+}
+
+.galery__lists{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5em;
+    justify-content: center;
+}
+
+.galery__list{
+    border-radius: 5px;
+    overflow: hidden;
+    flex: 0 0 calc(50% - 12px);
+    width: calc(50% - 12px);
+}
+
+/* promocion */
+
+.promocion{
+    position: relative;
+    padding: var(--container-padding);
+}
+
+.promocion .texts{
+    padding-top: 2em;
+    display: flex;
+    gap: 1em;
+    flex-direction: column;
+}
+
+/* items */
+
+.items{
+    padding: var(--container-padding);
+    --container-padding: 5em 0px;
+}
+
+.items__container{
+    display: grid;
+    text-align: center;
+    gap: 1.8em;
+    color: #fff;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    padding-top: 1.5em;
+}    
+    
+.subtitle{
+    line-height: 1.2rem;
+    font-size: 1.2rem;
+    color: var(--white);
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
+
+.subtitle + p{
+    font-size: 1em;
+    color: var(--gray);
+    line-height: 1.7rem;
+}
+
+@media (768px < width) {
+    
+    .section__details{
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+
+    .section__details .paragraph, .section__details .title, .promocion .title, .promocion .texts{
+        text-align: start;
+    }
+
+    /* galery */
+
+    .galery__list{    
+        flex: 0 0 calc(33.3% - 16px);
+        width: calc(33.3% - 16px);
+    }
+    
+    /* promocion */
+    
+    .promocion .texts{
+        position: absolute;
+        bottom: 0;
+        justify-content: center;
+        right: 5vw;
+        top: 0;
+        width: calc(50% - 5vw);
+    }
+
+    .promocion .title{
+        font-size: 1.5rem;
+    }
+
+    .promocion .paragraph{
+        font-size: 1.1rem;
+    }
+}
+
+@media (1024px < width) {
+    
+    .subtitle{
+        font-size: 1.5rem;
+    }
+
+    .subtitle + p{
+        font-size: 1.2em;
+        line-height: 1.8rem;
+    }    
+    
+    .promocion{
+        gap: .5em;
+    }
+
+    .promocion .title{
+        font-size: 1.8rem;
+    }
+
+    .promocion .paragraph{
+        font-size: 1.2rem;
+    }
+}
+
+@media (768px >= width) {   
+    
+    .items__container{
+        grid-template-columns: repeat(auto-fit, minmax(40%, 1fr));
+    }
+}

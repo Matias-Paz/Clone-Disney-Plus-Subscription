@@ -1,0 +1,266 @@
+/* Main */
+
+.main{
+    background-color: var(--very-dark-cyan);
+    text-align: center;
+    color: var(--white);
+    padding: var(--container-padding);
+}
+
+.texts{
+    display: grid;
+    gap: 1em;
+    text-align: center;
+}
+
+.main .texts{
+    padding: var(--container-padding);
+    padding-top: 2em;
+}
+
+.main__cards{
+    /* background-color: rebeccapurple; */
+    background-color: var(--very-dark-cyan);
+    padding-top: 16px;
+    top: 50px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    width: 90%;
+    margin: 0 auto;
+    position: -webkit-sticky;
+    position: sticky;
+
+}
+
+.main__card{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2em 0 1em;
+    border-top: 3px solid #1e202c;
+    border-bottom: 1px solid var(--white);
+}
+
+.main__card:nth-child(2n){
+    background-color: #1e202c;
+    border-top: 3px solid #343641;
+}
+
+.main__container{
+    width: 90%;    
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 1.2em;
+    flex-direction: column;
+    display: flex;
+    height: 100%;
+}
+
+.main__message{
+    position: absolute;
+    top: 10px;
+    width: 100%;
+    z-index: 1;
+}
+
+.main__title{
+    margin-bottom: auto;
+}
+
+.main__subtitle{
+    margin: 0 auto;
+    width: max-content;
+    padding: 4px 9px;
+    border-radius: 16px;
+    color: var(--very-dark-cyan);
+    background-color: var(--white);
+    font-weight: 600;
+    font-size: .85em;
+    /* height: 33%; */
+}
+
+.main__figure{
+    width: 60px;
+}
+
+.main__figure--width{
+    width: 100%;
+    max-width: 180px;
+}
+
+.main__img{
+    display: flex;
+    height: 100%;
+    width: 100%;
+}
+
+.main__detail{
+    display: grid;
+    text-align: center;
+    gap: 1.7em;
+    border-bottom: 1px solid var(--gray);
+    padding: .9em 0 .2em;
+    margin: 0 auto;
+    width: 90%;
+}
+
+.main__paraghaph{
+    font-size: 1em;
+    line-height: 1.5em;
+    width: 90%;
+    text-align: center;
+    place-self: center;
+}
+
+.main__items{
+    display: flex;
+    align-items: center;
+}
+
+.main__item{
+    width: 33.3%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1em 0;
+}
+
+.main__picture{
+    width: 100%;
+    height: 25px;
+}
+
+.main__picture--width{
+    height: 30px;
+    text-align: center;
+}
+
+.main__link{
+    color: var(--white);
+    text-decoration: underline;
+}
+
+.main__subparagraph{
+    color: var(--gray);
+    font-size: .8rem;
+    padding-top: .5em;
+}
+
+.main__number{
+    font-size: .8em;
+}
+
+.main__condition{
+    padding: 1.5em;
+    color: rgb(215, 215, 215);
+    font-size: .7rem;
+    line-height: 1.7em;
+}
+
+.main__condition--container{
+    margin: 0 auto;
+    display: flex;
+    width: 90%;
+}
+
+
+@media (480px <= width){
+
+    .main__message{
+        top: 20px;
+    }
+    
+    .main__cards{
+        padding-top: 34px;
+    }
+}
+
+
+@media (768px < width) {
+
+    .main__plan{
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+    }
+
+    .main__cards{
+        /* margin-top: 1em; */
+        /* width: 90%; */
+        /* top: 80px; */
+        display: flex;
+    }
+    
+    .main__cards::before{
+        content: " ";
+        position: relative;
+        width: 33%;
+        border-bottom: 1px solid var(--white);
+    }
+
+    .cta--main{
+        font-size: .9rem;
+    }
+    
+    .main__card:nth-child(1n){
+        position: relative;
+        width: 22.5%;
+    }
+
+    .main__message{
+        position: absolute;
+        top: -15px;
+    }
+    
+    .main__details{
+        width: 100%;
+    }
+
+    .main__detail{
+        padding: unset;
+    }
+    
+    .main__detail:nth-child(1n){
+        grid-template-columns: 33% 67%;
+        height: 100%;
+        gap: 0;
+    }
+
+    .main__paraghaph{
+        color: var(--gray);
+        text-align: start;
+        display: inline-flex;
+        width: 100%;
+        align-items: center;
+        padding: 2em 0;
+        font-size: 1.1rem;
+    }
+    
+    .main__item:nth-child(1n){
+        padding: 2em 0;
+    }
+
+    .main__item:nth-child(2n){
+        height: 100%;
+        background-color: #1e202c;
+    }
+
+    .main__picture{
+        width: 100%;
+        height: 20px;
+    }
+    
+    .main__picture--width{
+        height: 30px;
+        text-align: center;
+    }
+
+    .main__condition{
+        padding-left: 0;
+        text-align: start;
+        line-height: 1.7em;
+        font-size: .8rem;
+    }
+}
